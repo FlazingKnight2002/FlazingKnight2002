@@ -5,12 +5,9 @@ lights = [
     ('Yellow' , 0.5),
     ('Red' , 3)
 ] 
-i = 1
+colors = cycle(lights)
 while True:
-    c,s =  lights[i]
+    c,s =  next(colors)
     print(c)
     time.sleep(s)
-    if i == len(lights) - 1:
-        i = 0
-    else: 
-        i += 1
+    
